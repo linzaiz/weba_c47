@@ -13,12 +13,9 @@
 
         <asp:ScriptManager ID="ScriptManager1" runat="server">
       </asp:ScriptManager>
-       <asp:TextBox ID="TextBox1" Text="28" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>  
        <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click" />  
-          <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+       <asp:Button ID="btnSub" runat="server" Text="Sub" onclick="btnSub_Click" />  
        <div>  
-   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NSTConnectionString %>"  SelectCommand="SELECT * FROM [adjrpt_detail]"  >
-   </asp:SqlDataSource>
              <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                <ContentTemplate>
                    <asp:FormView   
@@ -162,6 +159,12 @@
            </asp:UpdatePanel>
        </div>  
             </div>
+        <p>
+       <asp:TextBox ID="TextBox1" Text="28" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>  
+          <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NSTConnectionString %>"  SelectCommand="SELECT * FROM [adjrpt_detail]"  >
+   </asp:SqlDataSource>
+             </p>
     </form>
 </body>
 </html>
